@@ -1,8 +1,8 @@
 package hexlet.code;
 
 public class Cli {
-    private String request = "May I have your name?";
-    private String greeting = "Hello, ";
+    private final String request = "May I have your name?";
+    private final String greeting = "Hello, ";
 
     public String getRequest() {
         return request;
