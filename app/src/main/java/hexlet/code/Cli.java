@@ -4,11 +4,11 @@ public class Cli {
     private String request = "May I have your name?";
     private String greeting = "Hello, ";
 
-    public String getRequest(){
+    public String getRequest() {
         return request;
     }
 
-    public String getGreeting(){
+    public String getGreeting() {
         return greeting;
     }
 
