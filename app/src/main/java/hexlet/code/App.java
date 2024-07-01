@@ -21,8 +21,5 @@ public class App {
             case 2:
                 Even.runEven();
         }
-
-
-
     }
 }
