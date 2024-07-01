@@ -18,10 +18,8 @@ public class App {
         System.out.println("Your choice: " + gameNumber);
 
         switch (gameNumber) {
-            case 1:
             case 2:
                 Even.runEven();
-            case 3:
         }
 
 
