@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class App {
     Even evenGame = new Even();
+    Greet greet = new Greet();
     public static void main(String[] args) {
 
         Scanner forGameNumber = new Scanner(System.in);
@@ -18,8 +19,12 @@ public class App {
         System.out.println("Your choice: " + gameNumber);
 
         switch (gameNumber) {
+            case 1:
+                Greet.greet();
+                break;
             case 2:
                 Even.runEven();
+                break;
         }
     }
 }
