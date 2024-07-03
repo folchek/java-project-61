@@ -37,6 +37,7 @@ public class Even {
             if (isEven && answer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again, " + name + "!");
+                break;
             }
             if (isntEven && answer.equals("no")) {
                 Engine.userAnswer(answer);
@@ -46,6 +47,7 @@ public class Even {
             if (isntEven && answer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + name + "!");
+                break;
             }
         }
         if (count == 3) {
