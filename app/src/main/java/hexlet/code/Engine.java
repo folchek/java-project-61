@@ -22,4 +22,8 @@ public class Engine {
         System.out.println("Your answer: " + answer);
     }
 
+    public static void questionNumberForGCD(int question, int question2) {
+        System.out.println("Question: " + question + " " + question2);
+    }
+
 }
