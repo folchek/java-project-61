@@ -31,8 +31,10 @@ public class App {
                 break;
             case 3:
                 Calc.runCalc();
+                break;
             case 4:
                 GCD.runGCD();
+                break;
 
 
         }
