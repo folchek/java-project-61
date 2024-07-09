@@ -6,6 +6,8 @@ public class App {
     Greet greet = new Greet();
     Calc calc = new Calc();
     GCD gcd = new GCD();
+    Progression progression = new Progression();
+    Prime prime = new Prime();
     public static void main(String[] args) {
 
         Scanner forGameNumber = new Scanner(System.in);
@@ -16,6 +18,8 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         int gameNumber = forGameNumber.nextInt();
@@ -35,8 +39,12 @@ public class App {
             case 4:
                 GCD.runGCD();
                 break;
-
-
+            case 5:
+                Progression.runProgression();
+                break;
+            case 6:
+                Prime.runPrime();
+                break;
         }
     }
 }

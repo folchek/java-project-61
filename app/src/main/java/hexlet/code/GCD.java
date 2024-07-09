@@ -6,7 +6,7 @@ public class GCD {
 
     public static int getRandomDiceNumber()
     {
-        return (int) (Math.random() * 100) + 1 ;
+        return (int) (Math.random() * 100) + 1;
     }
 
     public static void runGCD() {
