@@ -7,15 +7,19 @@ import java.util.stream.Collectors;
 
 public class Progression {
     public static int getRandomLengthProgression() {
-        return (int) (Math.random() * 5) + 5;
+        int rangeOfProgression = 5;
+        return (int) (Math.random() * rangeOfProgression) + rangeOfProgression;
     }
 
     public static int getRandomFirstNumberOfProgression() {
-        return (int) (Math.random() * 99) + 1;
+        int firstNumberOfProgression = 99;
+        int errorRate = 1;
+        return (int) (Math.random() * firstNumberOfProgression) + errorRate;
     }
 
     public static int getRandomDiffOfProgression() {
-        return (int) (Math.random() * 2) + 2;
+        int differenceOfTheProgression = 2;
+        return (int) (Math.random() * differenceOfTheProgression) + differenceOfTheProgression;
     }
     public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);

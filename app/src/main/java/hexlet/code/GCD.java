@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class GCD {
 
     public static int getRandomDiceNumber() {
-        return (int) (Math.random() * 100) + 1;
+        int randomNumber = 100;
+        int errorRate = 1;
+        return (int) (Math.random() * randomNumber) + errorRate;
     }
 
     public static void runGCD() {

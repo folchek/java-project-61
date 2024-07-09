@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Calc {
 
-    Engine engine = new Engine();
-
     public static int getRandomDiceNumber() {
-        return (int) (Math.random() * 100);
+        int rangeOfNumbers = 100;
+        return (int) (Math.random() * rangeOfNumbers);
     }
 
     public static char getRandomChar() {
-        int index = (int) (Math.random() * 3);
+        int countСharacter = 3;
+        int index = (int) (Math.random() * countСharacter);
         char[] charArray = {'+', '-', '*'};
         return charArray[index];
 

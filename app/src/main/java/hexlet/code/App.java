@@ -2,12 +2,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
-    Even evenGame = new Even();
-    Greet greet = new Greet();
-    Calc calc = new Calc();
-    GCD gcd = new GCD();
-    Progression progression = new Progression();
-    Prime prime = new Prime();
     public static void main(String[] args) {
 
         Scanner forGameNumber = new Scanner(System.in);

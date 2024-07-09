@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class Prime {
     public static int getRandomNumber() {
-        return (int) (Math.random() * 100) + 1;
+        int randomNumber = 100;
+        int errorRate = 1;
+        return (int) (Math.random() * randomNumber) + errorRate;
     }
     public static boolean isSimple(Integer number) {
         if (number < 2) {

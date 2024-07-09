@@ -2,9 +2,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Even {
-    Engine engine = new Engine();
     public static int getRandomDiceNumber() {
-        return (int) (Math.random() * 100);
+        int range = 100;
+        return (int) (Math.random() * range);
     }
 
     public static void runEven() {
