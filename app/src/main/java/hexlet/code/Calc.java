@@ -6,18 +6,18 @@ public class Calc {
 
     Engine engine = new Engine();
 
-    public static int getRandomDiceNumber()
-    {
+    public static int getRandomDiceNumber() {
         return (int) (Math.random() * 100);
     }
 
     public static char getRandomChar() {
         int index = (int) (Math.random() * 3);
-        char [] charArray = {'+', '-', '*'};
+        char[] charArray = {'+', '-', '*'};
         return charArray[index];
+
     }
 
-    public static void runCalc () {
+    public static void runCalc() {
 
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");

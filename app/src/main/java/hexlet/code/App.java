@@ -45,6 +45,8 @@ public class App {
             case 6:
                 Prime.runPrime();
                 break;
+            default:
+                break;
         }
     }
 }

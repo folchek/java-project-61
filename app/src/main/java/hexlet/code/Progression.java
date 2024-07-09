@@ -6,26 +6,22 @@ import java.util.stream.Collectors;
 
 
 public class Progression {
-    public static int getRandomLengthProgression()
-    {
+    public static int getRandomLengthProgression() {
         return (int) (Math.random() * 5) + 5;
     }
 
-    public static int getRandomFirstNumberOfProgression()
-    {
+    public static int getRandomFirstNumberOfProgression() {
         return (int) (Math.random() * 99) + 1;
     }
 
-    public static int getRandomDiffOfProgression()
-    {
+    public static int getRandomDiffOfProgression() {
         return (int) (Math.random() * 2) + 2;
     }
-    public static int getRandomElementProgression(int length)
-    {
+    public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);
     }
 
-    public static void runProgression () {
+    public static void runProgression() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
         Scanner forName = new Scanner(System.in);
@@ -40,7 +36,7 @@ public class Progression {
             int diffOfProgression = getRandomDiffOfProgression();
             int firstNumber = getRandomFirstNumberOfProgression();
 
-            int [] progression = new int[lengthOfProgression];
+            int[] progression = new int[lengthOfProgression];
 
             for (int j = 0; j < lengthOfProgression; j++) {
                 progression[j] = firstNumber;

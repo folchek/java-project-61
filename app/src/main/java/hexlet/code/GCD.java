@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class GCD {
 
-    public static int getRandomDiceNumber()
-    {
+    public static int getRandomDiceNumber() {
         return (int) (Math.random() * 100) + 1;
     }
 

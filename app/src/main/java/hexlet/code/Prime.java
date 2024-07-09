@@ -3,14 +3,15 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Prime {
-    public static int getRandomNumber()
-    {
+    public static int getRandomNumber() {
         return (int) (Math.random() * 100) + 1;
     }
     public static boolean isSimple(Integer number) {
-        if(number < 2) return false;
-        for(int i = 2; i < number / 2; i++) {
-            if(number % i == 0) {
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
                 return false;
             }
         }
