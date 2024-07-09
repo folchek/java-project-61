@@ -2,9 +2,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Even {
+    public static final int rangeOfNumbers = 100;
+    public static final int numberOfRounds = 3;
+    public static final int successRate = 3;
     public static int getRandomDiceNumber() {
-        int range = 100;
-        return (int) (Math.random() * range);
+        return (int) (Math.random() * rangeOfNumbers);
     }
 
     public static void runEven() {
@@ -20,7 +22,6 @@ public class Even {
         Scanner forAnswer = new Scanner(System.in);
 
         int count = 0;
-        int numberOfRounds = 3;
         for (int i = 0; i < numberOfRounds; i++) {
             int random = getRandomDiceNumber();
             Engine.questionNumber(random);
@@ -50,7 +51,7 @@ public class Even {
                 break;
             }
         }
-        int successRate = 3;
+
         if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }

@@ -3,14 +3,16 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Calc {
+    public static final int rangeOfNumbers = 100;
+    public static final int characterCount = 3;
+    public static final int numberOfRounds = 3;
+    public static final int successRate = 3;
 
     public static int getRandomDiceNumber() {
-        int rangeOfNumbers = 100;
         return (int) (Math.random() * rangeOfNumbers);
     }
 
     public static char getRandomChar() {
-        int characterCount = 3;
         int index = (int) (Math.random() * characterCount);
         char[] charArray = {'+', '-', '*'};
         return charArray[index];
@@ -29,7 +31,7 @@ public class Calc {
 
         Scanner forCalc = new Scanner(System.in);
         int count = 0;
-        int numberOfRounds = 3;
+
         for (int i = 0; i < numberOfRounds; i++) {
             int firstNumber = getRandomDiceNumber();
             int secondNumber = getRandomDiceNumber();
@@ -62,7 +64,6 @@ public class Calc {
                 break;
             }
         }
-        int successRate = 3;
         if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }

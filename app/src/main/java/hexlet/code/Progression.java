@@ -6,19 +6,21 @@ import java.util.stream.Collectors;
 
 
 public class Progression {
+    public static final int firstNumberOfProgression = 99;
+    public static final int differenceOfTheProgression = 2;
+    public static final int errorRate = 1;
+    public static final int rangeOfProgression = 5;
+    public static final int numberOfRounds = 3;
+    public static final int successRate = 3;
     public static int getRandomLengthProgression() {
-        int rangeOfProgression = 5;
         return (int) (Math.random() * rangeOfProgression) + rangeOfProgression;
     }
 
     public static int getRandomFirstNumberOfProgression() {
-        int firstNumberOfProgression = 99;
-        int errorRate = 1;
         return (int) (Math.random() * firstNumberOfProgression) + errorRate;
     }
 
     public static int getRandomDiffOfProgression() {
-        int differenceOfTheProgression = 2;
         return (int) (Math.random() * differenceOfTheProgression) + differenceOfTheProgression;
     }
     public static int getRandomElementProgression(int length) {
@@ -35,7 +37,6 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         Scanner forAnswers = new Scanner(System.in);
         int count = 0;
-        int numberOfRounds = 3;
         for (int i = 0; i < numberOfRounds; i++) {
             int lengthOfProgression = getRandomLengthProgression();
             int diffOfProgression = getRandomDiffOfProgression();
@@ -71,7 +72,6 @@ public class Progression {
             }
 
         }
-        int successRate = 3;
         if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
