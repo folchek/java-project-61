@@ -52,7 +52,7 @@ public class Progression {
 
             String result = Arrays.stream(progression)
                     .mapToObj(String::valueOf)
-                    .collect(Collectors.joining(", ")).replace(String.valueOf(progression[random]), "..");
+                    .collect(Collectors.joining(" ")).replace(String.valueOf(progression[random]), "..");
 
             Engine.questionArray(result);
             int answer = forAnswers.nextInt();
