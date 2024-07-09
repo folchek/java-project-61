@@ -10,8 +10,8 @@ public class Calc {
     }
 
     public static char getRandomChar() {
-        int countСharacter = 3;
-        int index = (int) (Math.random() * countСharacter);
+        int characterCount = 3;
+        int index = (int) (Math.random() * characterCount);
         char[] charArray = {'+', '-', '*'};
         return charArray[index];
 
@@ -29,7 +29,8 @@ public class Calc {
 
         Scanner forCalc = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             int firstNumber = getRandomDiceNumber();
             int secondNumber = getRandomDiceNumber();
             char symbol = getRandomChar();
@@ -61,7 +62,8 @@ public class Calc {
                 break;
             }
         }
-        if (count == 3) {
+        int successRate = 3;
+        if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
     }

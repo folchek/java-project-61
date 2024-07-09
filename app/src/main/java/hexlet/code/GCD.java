@@ -22,7 +22,8 @@ public class GCD {
 
         Scanner forGCD = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             int firstNumber = getRandomDiceNumber();
             int secondNumber = getRandomDiceNumber();
             Engine.questionNumberForGCD(firstNumber, secondNumber);
@@ -46,8 +47,8 @@ public class GCD {
                 break;
             }
         }
-
-        if (count == 3) {
+        int successRate = 3;
+        if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
     }

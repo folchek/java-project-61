@@ -30,7 +30,8 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             int number = getRandomNumber();
             Engine.questionNumber(number);
             String answer = scanner.nextLine();
@@ -56,7 +57,8 @@ public class Prime {
             }
 
         }
-        if (count == 3) {
+        int successRate = 3;
+        if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
 

@@ -20,7 +20,8 @@ public class Even {
         Scanner forAnswer = new Scanner(System.in);
 
         int count = 0;
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             int random = getRandomDiceNumber();
             Engine.questionNumber(random);
             String answer = forAnswer.nextLine();
@@ -49,7 +50,8 @@ public class Even {
                 break;
             }
         }
-        if (count == 3) {
+        int successRate = 3;
+        if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
     }

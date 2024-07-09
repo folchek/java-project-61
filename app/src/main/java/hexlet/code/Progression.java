@@ -35,7 +35,8 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         Scanner forAnswers = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < 3; i++) {
+        int numberOfRounds = 3;
+        for (int i = 0; i < numberOfRounds; i++) {
             int lengthOfProgression = getRandomLengthProgression();
             int diffOfProgression = getRandomDiffOfProgression();
             int firstNumber = getRandomFirstNumberOfProgression();
@@ -70,7 +71,8 @@ public class Progression {
             }
 
         }
-        if (count == 3) {
+        int successRate = 3;
+        if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
         }
     }
