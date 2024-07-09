@@ -34,6 +34,7 @@ public class Progression {
 
         System.out.println("What number is missing in the progression?");
         Scanner forAnswers = new Scanner(System.in);
+        int count = 0;
         for (int i = 0; i < 3; i++) {
             int lengthOfProgression = getRandomLengthProgression();
             int diffOfProgression = getRandomDiffOfProgression();
@@ -58,7 +59,6 @@ public class Progression {
             int answer = forAnswers.nextInt();
             Engine.userIntAnswer(answer);
 
-            int count = 0;
             if (answer == progression[random]) {
                 Engine.correctAnswer();
                 count++;
@@ -68,9 +68,10 @@ public class Progression {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-            if (count == 3) {
-                System.out.println("Congratulations, " + name + "!");
-            }
+
+        }
+        if (count == 3) {
+            System.out.println("Congratulations, " + name + "!");
         }
     }
 
