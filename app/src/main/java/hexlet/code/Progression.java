@@ -74,6 +74,7 @@ public class Progression {
         }
         if (count == successRate) {
             System.out.println("Congratulations, " + name + "!");
+
         }
     }
 
