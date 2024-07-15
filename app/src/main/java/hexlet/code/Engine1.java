@@ -102,7 +102,7 @@ public class Engine1 {
                     count++;
                     continue;
                 } else {
-                    System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
+            System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
                     System.out.println("Let's try again, " + name + "!");
                     break;
                 }
@@ -124,7 +124,7 @@ public class Engine1 {
                     count++;
                     continue;
                 } else {
-                    System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
+            System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
                     System.out.println("Let's try again, " + name + "!");
                     break;
                 }
@@ -149,7 +149,7 @@ public class Engine1 {
                     count++;
                     continue;
                 } else {
-                    System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
+            System.out.println(answer + " is wrong answer ;(. Correct answer was " + questionsAndAnswers[i][1] + ".");
                     System.out.println("Let's try again, " + name + "!");
                     break;
                 }
