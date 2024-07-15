@@ -46,7 +46,7 @@ public class App {
             case PRIME_GAME:
                 Prime.runPrime();
                 break;
-            case EXIT:
+            default:
                 break;
         }
     }
