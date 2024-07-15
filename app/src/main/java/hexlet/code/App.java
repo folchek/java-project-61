@@ -32,19 +32,19 @@ public class App {
                 Greet.greet();
                 break;
             case EVEN_GAME:
-                Even.runEven();
+                Even1.run();
                 break;
             case CALC_GAME:
-                Calc.runCalc();
+                Calc1.run();
                 break;
             case GCD_GAME:
-                GCD.runGCD();
+                GCD1.run();
                 break;
             case PROGRESSION_GAME:
-                Progression.runProgression();
+                Progression1.run();
                 break;
             case PRIME_GAME:
-                Prime.runPrime();
+                Prime1.run();
                 break;
             default:
                 break;
