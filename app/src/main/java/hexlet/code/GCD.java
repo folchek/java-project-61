@@ -3,13 +3,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class GCD {
-    public static final int randomNumber = 100;
-    public static final int errorRate = 1;
-    public static final int numberOfRounds = 3;
-    public static final int successRate = 3;
+    public static final int RANDOM_NUMBER = 100;
+    public static final int ERROR_RATE = 1;
+    public static final int NUMBER_OF_ROUNDS = 3;
+    public static final int SUCCESS_RATE = 3;
 
     public static int getRandomDiceNumber() {
-        return (int) (Math.random() * randomNumber) + errorRate;
+        return (int) (Math.random() * RANDOM_NUMBER) + ERROR_RATE;
     }
 
     public static void runGCD() {
@@ -24,7 +24,7 @@ public class GCD {
 
         Scanner forGCD = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < numberOfRounds; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             int firstNumber = getRandomDiceNumber();
             int secondNumber = getRandomDiceNumber();
             Engine.questionNumberForGCD(firstNumber, secondNumber);
@@ -48,7 +48,7 @@ public class GCD {
                 break;
             }
         }
-        if (count == successRate) {
+        if (count == SUCCESS_RATE) {
             System.out.println("Congratulations, " + name + "!");
         }
     }

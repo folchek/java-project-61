@@ -3,12 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Prime {
-    public static final int randomNumber = 100;
-    public static final int errorRate = 1;
-    public static final int numberOfRounds = 3;
-    public static final int successRate = 3;
+    public static final int RANDOM_NUMBER = 100;
+    public static final int ERROR_RATE = 1;
+    public static final int NUMBER_OF_ROUNDS = 3;
+    public static final int SUCCESS_RATE = 3;
     public static int getRandomNumber() {
-        return (int) (Math.random() * randomNumber) + errorRate;
+        return (int) (Math.random() * RANDOM_NUMBER) + ERROR_RATE;
     }
     public static boolean isSimple(Integer number) {
         if (number < 2) {
@@ -32,7 +32,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < numberOfRounds; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             int number = getRandomNumber();
             Engine.questionNumber(number);
             String answer = scanner.nextLine();
@@ -58,7 +58,7 @@ public class Prime {
             }
 
         }
-        if (count == successRate) {
+        if (count == SUCCESS_RATE) {
             System.out.println("Congratulations, " + name + "!");
         }
 

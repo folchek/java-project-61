@@ -2,6 +2,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
+    public static final int GREET = 1;
+    public static final int EVEN_GAME = 2;
+    public static final int CALC_GAME = 3;
+    public static final int GCD_GAME = 4;
+    public static final int PROGRESSION_GAME = 5;
+    public static final int PRIME_GAME = 6;
+    public static final int EXIT = 0;
     public static void main(String[] args) {
 
         Scanner forGameNumber = new Scanner(System.in);
@@ -21,25 +28,25 @@ public class App {
         System.out.println("Your choice: " + gameNumber);
 
         switch (gameNumber) {
-            case 1:
+            case GREET:
                 Greet.greet();
                 break;
-            case 2:
+            case EVEN_GAME:
                 Even.runEven();
                 break;
-            case 3:
+            case CALC_GAME:
                 Calc.runCalc();
                 break;
-            case 4:
+            case GCD_GAME:
                 GCD.runGCD();
                 break;
-            case 5:
+            case PROGRESSION_GAME:
                 Progression.runProgression();
                 break;
-            case 6:
+            case PRIME_GAME:
                 Prime.runPrime();
                 break;
-            default:
+            case EXIT:
                 break;
         }
     }

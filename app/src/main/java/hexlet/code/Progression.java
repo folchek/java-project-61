@@ -6,22 +6,22 @@ import java.util.stream.Collectors;
 
 
 public class Progression {
-    public static final int firstNumberOfProgression = 99;
-    public static final int differenceOfTheProgression = 2;
-    public static final int errorRate = 1;
-    public static final int rangeOfProgression = 5;
-    public static final int numberOfRounds = 3;
-    public static final int successRate = 3;
+    public static final int FIRST_NUMBER_OF_THE_PROGRESSION = 98;
+    public static final int DIFF_OF_THE_PROGRESSION = 2;
+    public static final int ERROR_RATE = 1;
+    public static final int RANGE_OF_THE_PROGRESSION = 5;
+    public static final int NUMBER_OF_ROUNDS = 3;
+    public static final int SUCCESS_RATE = 3;
     public static int getRandomLengthProgression() {
-        return (int) (Math.random() * rangeOfProgression) + rangeOfProgression;
+        return (int) (Math.random() * RANGE_OF_THE_PROGRESSION) + RANGE_OF_THE_PROGRESSION;
     }
 
     public static int getRandomFirstNumberOfProgression() {
-        return (int) (Math.random() * firstNumberOfProgression) + errorRate;
+        return (int) (Math.random() * FIRST_NUMBER_OF_THE_PROGRESSION) + ERROR_RATE;
     }
 
     public static int getRandomDiffOfProgression() {
-        return (int) (Math.random() * differenceOfTheProgression) + differenceOfTheProgression;
+        return (int) (Math.random() * DIFF_OF_THE_PROGRESSION) + DIFF_OF_THE_PROGRESSION;
     }
     public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);
@@ -37,7 +37,7 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         Scanner forAnswers = new Scanner(System.in);
         int count = 0;
-        for (int i = 0; i < numberOfRounds; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             int lengthOfProgression = getRandomLengthProgression();
             int diffOfProgression = getRandomDiffOfProgression();
             int firstNumber = getRandomFirstNumberOfProgression();
@@ -72,7 +72,7 @@ public class Progression {
             }
 
         }
-        if (count == successRate) {
+        if (count == SUCCESS_RATE) {
             System.out.println("Congratulations, " + name + "!");
 
         }
