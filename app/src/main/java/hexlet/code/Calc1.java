@@ -33,7 +33,7 @@ public class Calc1 {
     }
 
     public static void run() {
-        String [][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
             int firstNumber = getRandomNumber();

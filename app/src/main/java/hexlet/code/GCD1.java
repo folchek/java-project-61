@@ -14,7 +14,7 @@ public class GCD1 {
         return fistNumber + " " + secondNumber;
     }
 
-    public static int getGCD(int firstNumber,int secondNumber) {
+    public static int getGCD(int firstNumber, int secondNumber) {
         while (firstNumber != secondNumber) {
             if (firstNumber > secondNumber) {
                 firstNumber = firstNumber - secondNumber;
@@ -27,7 +27,7 @@ public class GCD1 {
 
     public static void run() {
 
-        String [][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
             int firstNumber = getRandomDiceNumber();

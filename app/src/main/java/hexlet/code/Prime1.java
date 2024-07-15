@@ -22,7 +22,7 @@ public class Prime1 {
 
     public static void run() {
 
-        int [][] questionsAndAnswers = new int[NUMBER_OF_ROUND][];
+        int[][] questionsAndAnswers = new int[NUMBER_OF_ROUND][];
 //В результате проверки методом isSimple, answer становится равным 0 или 1. 0 - означает неверный ответ, 1 - верный.
         for (int i = 0; i < questionsAndAnswers.length; i++) {
             int number = getRandomNumber();

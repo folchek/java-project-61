@@ -22,7 +22,7 @@ public class Progression1 {
     public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);
     }
-    public static int [] getRandomProgression (int length, int diff, int firstNumber) {
+    public static int[] getRandomProgression(int length, int diff, int firstNumber) {
         int[] progression = new int[length];
 
         for (int j = 0; j < length; j++) {
@@ -34,7 +34,7 @@ public class Progression1 {
 
     public static void run() {
 
-        String [][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
             int lengthOfProgression = getRandomLengthProgression();
@@ -43,7 +43,7 @@ public class Progression1 {
 
             int random = getRandomElementProgression(lengthOfProgression);
 
-            int [] progression = getRandomProgression(lengthOfProgression, diffOfProgression, firstNumber);
+            int[] progression = getRandomProgression(lengthOfProgression, diffOfProgression, firstNumber);
 
             String result = Arrays.stream(progression)
                     .mapToObj(String::valueOf)
