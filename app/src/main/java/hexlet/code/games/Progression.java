@@ -44,6 +44,5 @@ public class Progression {
             questionsAndAnswers[i] = new String[] {result, correctAnswer};
         }
         Engine.run(questionsAndAnswers, rules);
-
     }
 }
