@@ -27,9 +27,9 @@ public class Progression {
         String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
         String rules = "What number is missing in the progression?";
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int lengthOfProgression =  Utils.getRandomNumber(5, 10);
-            int diffOfProgression =  Utils.getRandomNumber(1, 3);
-            int firstNumber =  Utils.getRandomNumber(1, 100);
+            int lengthOfProgression =  Utils.getRandomNumber(Utils.LOW_FOR_PROGRESSION, Utils.HIGH_FOR_PROGRESSION);
+            int diffOfProgression =  Utils.getRandomNumber(Utils.LOW, Utils.DIFF);
+            int firstNumber =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
 
             int random = getRandomElementProgression(lengthOfProgression);
 

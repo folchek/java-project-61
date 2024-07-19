@@ -29,8 +29,8 @@ public class Calc {
         String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
         String rules = "What is the result of the expression?";
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int firstNumber = Utils.getRandomNumber(1, 100);
-            int secondNumber = Utils.getRandomNumber(1, 100);
+            int firstNumber = Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
+            int secondNumber = Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             char symbol = Utils.getRandomChar();
             int answer = getAnswer(firstNumber, secondNumber, symbol);
             String question = getExpression(firstNumber, secondNumber, symbol);

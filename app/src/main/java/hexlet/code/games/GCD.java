@@ -29,8 +29,8 @@ public class GCD {
         String rules = "Find the greatest common divisor of given numbers.";
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int firstNumber = Utils.getRandomNumber(1, 100);
-            int secondNumber =  Utils.getRandomNumber(1, 100);
+            int firstNumber = Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
+            int secondNumber =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             int answer = getGCD(firstNumber, secondNumber);
             String question = questionNumberForGCD(firstNumber, secondNumber);
             String correctAnswer = String.valueOf(answer);

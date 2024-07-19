@@ -23,7 +23,7 @@ public class Prime {
         String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int number =  Utils.getRandomNumber(1, 100);
+            int number =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             String correctAnswer = "";
             if (isSimple(number)) {
                 correctAnswer = "yes";
