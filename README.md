@@ -13,10 +13,9 @@ Mind Games is a series of 5 console games that ask the user to answer simple mat
 * Prime - determining a prime number.
 
 ### How to install:
-
-git clone git@github.com:folchek/java-project-61.git
-cd java-project-61
-make -C app build
+    git clone git@github.com:folchek/java-project-61.git
+    cd java-project-61
+    make -C app build
 
 ### Examples of usage:
 
