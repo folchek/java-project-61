@@ -1,18 +1,11 @@
-package hexlet.code;
+package hexlet.code.games;
 
-public class Calc1 {
-    public static final int RANGE_OF_NUMBERS = 100;
-    public static final int CHARACTER_COUNT = 3;
+import hexlet.code.Engine;
+import hexlet.code.Utils;
+
+public class Calc {
     public static final int NUMBER_OF_ROUND = 3;
 
-    public static int getRandomNumber() {
-        return (int) (Math.random() * RANGE_OF_NUMBERS);
-    }
-    public static char getRandomChar() {
-        int index = (int) (Math.random() * CHARACTER_COUNT);
-        char[] charArray = {'+', '-', '*'};
-        return charArray[index];
-    }
     public static String getExpression(int firstNumber, int secondNumber, char symbol) {
         String question1 = String.valueOf(firstNumber);
         String question2 = String.valueOf(secondNumber);
@@ -34,16 +27,16 @@ public class Calc1 {
 
     public static void run() {
         String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
-
+        String rules = "What is the result of the expression?";
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int firstNumber = getRandomNumber();
-            int secondNumber = getRandomNumber();
-            char symbol = getRandomChar();
+            int firstNumber = Utils.getRandomNumber(1, 100);
+            int secondNumber = Utils.getRandomNumber(1, 100);
+            char symbol = Utils.getRandomChar();
             int answer = getAnswer(firstNumber, secondNumber, symbol);
-            String finalQuestion = getExpression(firstNumber, secondNumber, symbol);
-            String finalAnswer = String.valueOf(answer);
-            questionsAndAnswers[i] = new String[] {finalQuestion, finalAnswer};
+            String question = getExpression(firstNumber, secondNumber, symbol);
+            String correctAnswer = String.valueOf(answer);
+            questionsAndAnswers[i] = new String[] {question, correctAnswer};
         }
-        Engine1.run(questionsAndAnswers, "Calc");
+        Engine.run(questionsAndAnswers, rules);
     }
 }

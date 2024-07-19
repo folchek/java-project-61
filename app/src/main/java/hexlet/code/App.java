@@ -1,4 +1,6 @@
 package hexlet.code;
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -32,19 +34,19 @@ public class App {
                 Greet.greet();
                 break;
             case EVEN_GAME:
-                Even1.run();
+                Even.run();
                 break;
             case CALC_GAME:
-                Calc1.run();
+                Calc.run();
                 break;
             case GCD_GAME:
-                GCD1.run();
+                GCD.run();
                 break;
             case PROGRESSION_GAME:
-                Progression1.run();
+                Progression.run();
                 break;
             case PRIME_GAME:
-                Prime1.run();
+                Prime.run();
                 break;
             default:
                 break;

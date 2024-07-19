@@ -1,13 +1,11 @@
-package hexlet.code;
+package hexlet.code.games;
 
-public class GCD1 {
+import hexlet.code.Engine;
+import hexlet.code.Utils;
+
+public class GCD {
     public static final int NUMBER_OF_ROUND = 3;
-    public static final int RANDOM_NUMBER = 100;
-    public static final int ERROR_RATE = 1;
 
-    public static int getRandomDiceNumber() {
-        return (int) (Math.random() * RANDOM_NUMBER) + ERROR_RATE;
-    }
     public static String questionNumberForGCD(int question, int question2) {
         String fistNumber = String.valueOf(question);
         String secondNumber = String.valueOf(question2);
@@ -28,15 +26,16 @@ public class GCD1 {
     public static void run() {
 
         String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String rules = "Find the greatest common divisor of given numbers.";
 
         for (int i = 0; i < questionsAndAnswers.length; i++) {
-            int firstNumber = getRandomDiceNumber();
-            int secondNumber = getRandomDiceNumber();
+            int firstNumber = Utils.getRandomNumber(1, 100);
+            int secondNumber =  Utils.getRandomNumber(1, 100);
             int answer = getGCD(firstNumber, secondNumber);
-            String finalQuestion = questionNumberForGCD(firstNumber, secondNumber);
-            String finalAnswer = String.valueOf(answer);
-            questionsAndAnswers[i] = new String[] {finalQuestion, finalAnswer};
+            String question = questionNumberForGCD(firstNumber, secondNumber);
+            String correctAnswer = String.valueOf(answer);
+            questionsAndAnswers[i] = new String[] {question, correctAnswer};
         }
-        Engine1.run(questionsAndAnswers, "GCD");
+        Engine.run(questionsAndAnswers, rules);
     }
 }
