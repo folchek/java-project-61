@@ -3,8 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+
     public static final int QUESTION_INDEX_IN_ARRAY = 0;
+
     public static final int CORRECT_ANSWER_INDEX_IN_ARRAY = 1;
+
     public static final int NUMBER_OF_ROUNDS_IN_GAME = 3;
 
     public static void run(String[][] gameData, String rules) {
@@ -30,6 +33,8 @@ public class Engine {
                 return;
             }
         }
+
         System.out.println("Congratulations, " + userName + "!");
+
     }
 }

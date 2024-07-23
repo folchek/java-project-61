@@ -7,11 +7,11 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Progression {
-    public static final int NUMBER_OF_ROUND = 3;
 
     public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);
     }
+
     public static int[] getRandomProgression(int length, int diff, int firstNumber) {
         int[] progression = new int[length];
 
@@ -24,9 +24,9 @@ public class Progression {
 
     public static void run() {
 
-        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS_IN_GAME][];
         String rules = "What number is missing in the progression?";
-        for (int i = 0; i < questionsAndAnswers.length; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS_IN_GAME; i++) {
             int lengthOfProgression =  Utils.getRandomNumber(Utils.LOW_FOR_PROGRESSION, Utils.HIGH_FOR_PROGRESSION);
             int diffOfProgression =  Utils.getRandomNumber(Utils.LOW, Utils.DIFF);
             int firstNumber =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
@@ -43,6 +43,8 @@ public class Progression {
 
             questionsAndAnswers[i] = new String[] {result, correctAnswer};
         }
+
         Engine.run(questionsAndAnswers, rules);
+
     }
 }

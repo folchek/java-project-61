@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
-    public static final int NUMBER_OF_ROUND = 3;
 
     public static String questionNumberForGCD(int question, int question2) {
         String fistNumber = String.valueOf(question);
@@ -25,10 +24,10 @@ public class GCD {
 
     public static void run() {
 
-        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS_IN_GAME][];
         String rules = "Find the greatest common divisor of given numbers.";
 
-        for (int i = 0; i < questionsAndAnswers.length; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS_IN_GAME; i++) {
             int firstNumber = Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             int secondNumber =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             int answer = getGCD(firstNumber, secondNumber);
@@ -36,6 +35,8 @@ public class GCD {
             String correctAnswer = String.valueOf(answer);
             questionsAndAnswers[i] = new String[] {question, correctAnswer};
         }
+
         Engine.run(questionsAndAnswers, rules);
+
     }
 }

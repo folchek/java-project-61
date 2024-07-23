@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static final int NUMBER_OF_ROUND = 3;
 
     public static boolean isSimple(Integer number) {
         if (number < 2) {
@@ -20,9 +19,9 @@ public class Prime {
 
     public static void run() {
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] questionsAndAnswers = new String[NUMBER_OF_ROUND][];
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS_IN_GAME][];
 
-        for (int i = 0; i < questionsAndAnswers.length; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS_IN_GAME; i++) {
             int number =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
             String correctAnswer = "";
             if (isSimple(number)) {
@@ -33,6 +32,8 @@ public class Prime {
             String question = String.valueOf(number);
             questionsAndAnswers[i] = new String[] {question, correctAnswer};
         }
+
         Engine.run(questionsAndAnswers, rules);
+
     }
 }
