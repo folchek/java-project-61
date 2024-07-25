@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static final int QUESTION_INDEX_IN_ARRAY = 0;
+    private static final int QUESTION_INDEX_IN_ARRAY = 0;
 
-    public static final int CORRECT_ANSWER_INDEX_IN_ARRAY = 1;
+    private static final int CORRECT_ANSWER_INDEX_IN_ARRAY = 1;
 
     public static final int NUMBER_OF_ROUNDS_IN_GAME = 3;
 

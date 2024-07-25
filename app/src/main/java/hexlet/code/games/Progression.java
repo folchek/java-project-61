@@ -8,6 +8,12 @@ import java.util.stream.Collectors;
 
 public class Progression {
 
+    private static final int HIGH_FOR_PROGRESSION = 10;
+
+    private static final int LOW_FOR_PROGRESSION = 5;
+
+    public static final int DIFF = 3;
+
     public static int getRandomElementProgression(int length) {
         return (int) (Math.random() * length);
     }
@@ -27,8 +33,8 @@ public class Progression {
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS_IN_GAME][];
         String rules = "What number is missing in the progression?";
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS_IN_GAME; i++) {
-            int lengthOfProgression =  Utils.getRandomNumber(Utils.LOW_FOR_PROGRESSION, Utils.HIGH_FOR_PROGRESSION);
-            int diffOfProgression =  Utils.getRandomNumber(Utils.LOW, Utils.DIFF);
+            int lengthOfProgression =  Utils.getRandomNumber(LOW_FOR_PROGRESSION, HIGH_FOR_PROGRESSION);
+            int diffOfProgression =  Utils.getRandomNumber(Utils.LOW, DIFF);
             int firstNumber =  Utils.getRandomNumber(Utils.LOW, Utils.HIGH);
 
             int random = getRandomElementProgression(lengthOfProgression);

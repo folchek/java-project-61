@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    public static final int CHARACTER_COUNT = 3;
+    private static final int CHARACTER_COUNT = 3;
 
     public static char getRandomOperator() {
         int index = (int) (Math.random() * CHARACTER_COUNT);
@@ -21,13 +21,12 @@ public class Calc {
     }
 
     public static int getCalculate(int firstNumber, int secondNumber, char symbol) {
-        if (symbol == '+') {
-            return firstNumber + secondNumber;
-        }
-        if (symbol == '-') {
-            return firstNumber - secondNumber;
-        }
-        return firstNumber * secondNumber;
+        return switch (symbol) {
+            case '+' -> firstNumber + secondNumber;
+            case '-' -> firstNumber - secondNumber;
+            case '*' -> firstNumber * secondNumber;
+            default -> throw new Error("Unknown symbol: " + symbol + " !");
+        };
     }
 
     public static void run() {
